@@ -3,12 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
         android:text="@string/hello_world"
         tools:context=".MainActivity" />
 
@@ -18,17 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView1"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
+        android:ems="10" />
 
     <Button
         android:id="@+id/button1"
@@ -39,11 +36,18 @@
         android:text="read" />
 
     <Button
+        android:id="@+id/buttonDecode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="decodePic" />
+
+    <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText1"
-        android:layout_marginLeft="25dp"
         android:layout_toRightOf="@+id/button1"
         android:text="Save" />
 
@@ -51,18 +55,8 @@
         android:id="@+id/buttonTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editText1"
         android:layout_below="@+id/editText1"
-        android:layout_marginLeft="28dp"
-        android:layout_toRightOf="@+id/buttonSave"
         android:text="encodePic" />
-
-    <Button
-        android:id="@+id/buttonDecode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonTest"
-        android:layout_alignBottom="@+id/buttonTest"
-        android:layout_toRightOf="@+id/buttonTest"
-        android:text="decodePic" />
 
 </RelativeLayout>
