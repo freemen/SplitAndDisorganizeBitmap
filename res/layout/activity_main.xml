@@ -54,6 +54,15 @@
         android:layout_below="@+id/editText1"
         android:layout_marginLeft="28dp"
         android:layout_toRightOf="@+id/buttonSave"
-        android:text="Button" />
+        android:text="encodePic" />
+
+    <Button
+        android:id="@+id/buttonDecode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonTest"
+        android:layout_alignBottom="@+id/buttonTest"
+        android:layout_toRightOf="@+id/buttonTest"
+        android:text="decodePic" />
 
 </RelativeLayout>

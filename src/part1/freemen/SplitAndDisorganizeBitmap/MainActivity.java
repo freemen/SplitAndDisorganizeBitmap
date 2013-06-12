@@ -44,6 +44,7 @@ public class MainActivity extends Activity{
 			public void onClick(View v) {
 				if (showBitmap != null){
 					bHandler.saveBitmap(showBitmap);
+					Toast.makeText(getApplicationContext(), "Bitmap saved~", Toast.LENGTH_SHORT).show();
 					Log.v("MainActivity", "Bitmap Saved~");
 				}else{
 					Toast.makeText(getApplicationContext(), "no photo to save", Toast.LENGTH_SHORT).show();
@@ -58,6 +59,15 @@ public class MainActivity extends Activity{
 				showBitmap = twoDCodeMaking.string2Bitmap(text);
 				imageView.setImageBitmap(showBitmap);
 				
+			}
+        });
+        
+        ((Button)(findViewById(R.id.buttonDecode))).setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				String text = twoDCodeMaking.bitmap2String(showBitmap);
+				((TextView)findViewById(R.id.textView1)).setText(text);
+				showBitmap = twoDCodeMaking.showChangedBm();
+				imageView.setImageBitmap(showBitmap);
 			}
         });
         
